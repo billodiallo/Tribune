@@ -39,6 +39,11 @@ class Article(models.Model):
     pub_date = models.DateTimeField(auto_now_add=True)
     article_image = models.ImageField(upload_to='articles/', blank=True)
 
+class MoringaMerch(models.Model):
+    name = models.CharField(max_length=40)
+    description = models.TextField()
+    price = models.DecimalField(decimal_places=2, max_digits=20)    
+
     @classmethod
     def today_news(cls):
         today = dt.date.today()

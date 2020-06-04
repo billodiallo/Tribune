@@ -57,6 +57,9 @@ INSTALLED_APPS = [
     'news',
     'bootstrap3',
      'tinymce',
+     'rest_framework',
+     'rest_framework.authtoken'
+
 ]
 
 MIDDLEWARE = [
@@ -141,6 +144,12 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+#ADDING DEFAULT AUTHENTICATION CLASSES
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    )
+}
 
 
 # Internationalization
